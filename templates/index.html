@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>我的留言板</title>
+    <link rel="stylesheet" type="text/css" href="../static/main.css">
+</head>
+<body>
+<h1>留言板</h1>
+<hr/>
+<!--提交留言功能区域-->
+<form action="/post" method="post">
+    <h3>请留言</h3>
+    <table>
+        <tr>
+            <th>名字</th>
+            <td>
+                <input type="text" size="20" name="name"></input>
+            </td>
+
+        </tr>
+        <tr>
+            <th>留言</th>
+            <td>
+                <textarea rows="5" cols="40" name="comment"></textarea>
+            </td>
+
+        </tr>
+    </table>
+    <p>
+        <button type="submit">提交</button>
+    </p>
+</form>
+<hr/>
+<!--显示留言功能区域-->
+<div>
+    <h3>最新留言</h3>
+    {% for greeting in greeting_list %}
+    <h4>{{ greeting.name }}({{ greeting.create_at|format_time }})</h4>
+    <p>{{ greeting.comment|nl2br }}</p>
+    {% endfor %}
+</div>
+</body>
+</html>

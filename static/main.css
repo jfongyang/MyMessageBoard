@@ -1,0 +1,27 @@
+h1{
+    color: black;
+    font-size:36pt;
+}
+
+h2{
+    color: black;
+    font-size:18pt;
+}
+
+p{
+    color: black;
+    font-size:12pt;
+}
+form{
+    color: black;
+    font-size:12pt;
+}
+br{
+    color: black;
+    font-size:6pt;
+}
+button{
+    color: black;
+    font-size:11pt;
+    font-weight: bold;
+}
